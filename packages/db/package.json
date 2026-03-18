@@ -1,0 +1,19 @@
+{
+    "name": "@repo/db",
+    "version": "0.0.0",
+    "dependencies": {
+        "@prisma/adapter-pg": "^7.5.0",
+        "@prisma/client": "^7.5.0",
+        "bcrypt": "^5.1.1",
+        "dotenv": "^16.0.3"
+    },
+    "devDependencies": {
+        "prisma": "^7.5.0"
+    },
+    "exports": {
+        "./client": "./index.ts"
+    },
+    "prisma": {
+        "seed": "ts-node prisma/seed.ts"
+    }
+}
