@@ -25,6 +25,9 @@ jobs:
         file: ./docker/Dockerfile.user
         push: true
         tags: mohithganesh/myapp:latest  # Replace with your Docker Hub username and repository
+        build-args: |
+          DATABASE_URL=${{ secrets.DATABASE_URL }}
+          JWT_SECRET=${{ secrets.JWT_SECRET }}
 
     - name: Verify Pushed Image
       run: docker pull mohithganesh/myapp:latest  # Replace with your Docker Hub username and repository
